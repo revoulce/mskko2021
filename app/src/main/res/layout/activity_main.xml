@@ -7,68 +7,70 @@
     android:background="@drawable/trees_background"
     tools:context=".Onboarding">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="191sp"
-        android:layout_height="199sp"
-        android:contentDescription="@string/app_logo"
-        android:elevation="120sp"
-        android:src="@drawable/app_logo"
-        app:layout_constraintBottom_toTopOf="@id/welcome"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30sp">
 
-    <TextView
-        android:id="@+id/welcome"
-        style="@style/TextStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome"
-        android:textColor="@color/white"
-        android:textFontWeight="700"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="191sp"
+            android:layout_height="199sp"
+            android:contentDescription="@string/app_logo"
+            android:elevation="120sp"
+            android:src="@drawable/app_logo"
+            app:layout_constraintBottom_toTopOf="@id/welcome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/welcome_text"
-        style="@style/TextStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome_text"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textFontWeight="500"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/welcome" />
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:textFontWeight="700"
+            android:textSize="34sp"
+            android:theme="@style/TextViewStyleWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/bt_prelogin"
-        style="@style/ButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="login"
-        android:paddingStart="70sp"
-        android:paddingEnd="70sp"
-        android:text="@string/bt_prelogin_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/welcome_text" />
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_text"
+            android:textAlignment="center"
+            android:textFontWeight="500"
+            android:textSize="20sp"
+            android:theme="@style/TextViewStyleWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcome" />
 
-    <TextView
-        android:id="@+id/preregistration"
-        style="@style/TextStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="register"
-        android:text="@string/preregistration_text"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bt_prelogin" />
+        <Button
+            android:id="@+id/bt_prelogin"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rounded"
+            android:onClick="login"
+            android:text="@string/bt_prelogin_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcome_text" />
+
+        <TextView
+            android:id="@+id/preregistration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="register"
+            android:text="@string/preregistration_text"
+            android:theme="@style/TextViewStyleWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_prelogin" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,28 +4,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login"
-    android:background="@color/outer_space">
+    android:background="@color/outer_space"
+    tools:context=".Login">
 
-    <ImageView
-        android:layout_width="40sp"
-        android:layout_height="50sp"
-        android:src="@drawable/app_logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30sp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="40sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="50sp"
+            android:src="@drawable/app_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_sign_in"
+            style="@style/TextViewStyleWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:text="@string/sign_in_text"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30sp"
+            android:autofillHints="emailAddress"
+            android:hint="@string/email_hint_text"
+            android:inputType="textEmailAddress|textWebEmailAddress"
+            android:minHeight="48dp"
+            android:singleLine="true"
+            android:theme="@style/TextEditStyleWhite"
+            app:layout_constraintBottom_toTopOf="@id/et_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    B
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="password"
+            android:hint="@string/password_hint_text"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:singleLine="true"
+            android:theme="@style/TextEditStyleWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/bt_sign_in"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="23sp"
+            android:background="@drawable/button_rounded"
+            android:onClick="signIn"
+            android:text="@string/sign_in_text"
+            app:layout_constraintBottom_toTopOf="@id/tv_register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:onClick="register"
+            android:text="@string/register_text"
+            android:theme="@style/TextViewStyleWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_password" />
+
+        <Button
+            android:id="@+id/bt_profile"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23sp"
+            android:background="@drawable/button_rounded"
+            android:onClick="goToProfile"
+            android:text="@string/bt_profile_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_register" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

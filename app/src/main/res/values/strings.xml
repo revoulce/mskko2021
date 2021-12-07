@@ -6,4 +6,9 @@
     <string name="app_logo">App Logo</string>
     <string name="preregistration_text">Еще нет аккаунта? <b>Зарегистрируйтесь</b></string>
     <string name="registration_blank_text">Тут будет\nрегистрация</string>
+    <string name="sign_in_text">Sign in</string>
+    <string name="password_hint_text">Пароль</string>
+    <string name="email_hint_text">Email</string>
+    <string name="register_text">Register</string>
+    <string name="bt_profile_text">Профиль</string>
 </resources>
