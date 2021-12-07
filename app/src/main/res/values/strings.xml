@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">mskko2021</string>
+    <string name="welcome">ПРИВЕТ</string>
+    <string name="welcome_text">Наслаждайся отборочными.\nБудь внимателен.\nДелай хорошо.</string>
+    <string name="bt_prelogin_text">Войти в аккаунт</string>
+    <string name="app_logo">App Logo</string>
+    <string name="preregistration_text">Еще нет аккаунта? <b>Зарегистрируйтесь</b></string>
+    <string name="registration_blank_text">Тут будет\nрегистрация</string>
+</resources>
